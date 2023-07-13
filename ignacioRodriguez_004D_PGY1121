@@ -1,1 +1,97 @@
+seleccion = 0
+entradas = [120000,80000,50000]
+asientosPlatinum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+asientosGold = [21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]
+asientosSilver = [51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100]
+disponiblesPlatinum = [20]
+asistentes = [0]
+cantidadEntradas = 0
+cantidadEntradas2 = 0
+cantidadEntradas3 = 0
+valorEntradas = 0
+valorEntradas2 = 0
+valorEntradas3 = 0
+while True:
+
+    print("Creativos.cl")
+    print("--"*20)
+    print("1.Comprar entradas")
+    print("2.Mostrar Ubicaciones disponibles")
+    print("3.Ver listado de asistentes")
+    print("4.Mostrar ganacias totales")
+    print("5.Salir")
+
+    seleccion = int(input("Opcion escogida: "))
+
+    print("--"*20)
+
+    if seleccion == 5:
+        print("   MUCHAS GRACIAS POR SU VISITA\n\t   VUELVA PRONTO")
+        print("--"*20)
+        print("\t Ignacio Rodriguez\n\t    13-07-2023")
+        print("--"*20)
+        break
+
+    elif seleccion == 1:
+        print("Valor Entradas:")
+        print("1.Platinum: $120.000 (Asientos del 1 al 20)")
+        print("2.Gold: $80.000 (Asientos del 21 al 50)")
+        print("3.Silver: $50.000 (Asientos del 51 al 100)")
+        print("4.Salir")
+
+        tipoEntrada = int(input("Seleccion tipo entrada: "))
+        print("--"*20)
+
+        if tipoEntrada == 1:
+            cantidadEntradas = int((input("Porfavor, indique la cantidad de entradas a comprar (max 3):")))
+            while cantidadEntradas >=1 and cantidadEntradas <=3:
+                valorEntradas = cantidadEntradas * entradas[0]
+                print("Porfavor, seleccione su asiento.")
+                print(asientosPlatinum)
+                asientosPlatinum.append(int(input("Asiento Seleccionado: ")))
+                break
+        
+        if tipoEntrada == 2:
+            cantidadEntradas2 = int((input("Porfavor, indique la cantidad de entradas a comprar (max 3):")))
+            while cantidadEntradas2 >=1 and cantidadEntradas2 <=3:
+                valorEntradas2 = cantidadEntradas2 * entradas[1]
+                print("Porfavor, seleccione su asiento.")
+                print(asientosGold)
+                asientosgold.append(int(input("Asiento Seleccionado: ")))
+                break
+                
+
+        if tipoEntrada == 3:
+            cantidadEntradas3 = int((input("Porfavor, indique la cantidad de entradas a comprar (max 3):")))
+            while cantidadEntradas3 >=1 and cantidadEntradas3 <=3:
+                valorEntradas3 = cantidadEntradas3 * entradas[2]
+                print("Porfavor, seleccione su asiento.")
+                print(asientosSilver)
+                asientosSilver.append(int(input("Asiento Seleccionado: ")))
+                break
+
+        if tipoEntrada == 4:
+            break
+
+
+    elif seleccion == 2:
+        print("Ubicaciones disponibles:")
+        print("Asientos Platinum: ",asientosPlatinum)
+        print("Asientos Gold: ",asientosGold)
+        print("Asientos Silver: ",asientosSilver)
+        print("--"*20)
+
+    elif seleccion == 3:
+        print("Ver listado de asistentes:")
+        print(asistentes)
+
+    elif seleccion == 4:
+        print("Ganancias Totales:")
+        print("Tipo Entrada  \t  Cantidad  \t  total")
+        print(" Platinum\t     ", cantidadEntradas, "\t   ", valorEntradas)
+        print(" Gold\t             ", cantidadEntradas2, "\t   ",valorEntradas2)
+        print(" Silver\t             ", cantidadEntradas3, "\t   ",valorEntradas3)
+            
+
+            
 
